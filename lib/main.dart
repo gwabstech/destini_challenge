@@ -1,5 +1,6 @@
 
 
+import 'package:destini_challenge/StoryBrain.dart';
 import 'package:flutter/material.dart';
 
 //TODO: Step 15 - Run the app and see if you can see the screen update with the first story. Delete this TODO if it looks as you expected.
@@ -28,11 +29,18 @@ class StoryPage extends StatefulWidget {
 }
 
 class _StoryPageState extends State<StoryPage> {
+  StoryBrain story = StoryBrain();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         //TODO: Step 1 - Add background.png to this Container as a background image.
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('images/background.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
         padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
         constraints: const BoxConstraints.expand(),
         child: SafeArea(
