@@ -21,6 +21,7 @@ class StoryPage extends StatefulWidget {
   const StoryPage({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _StoryPageState createState() => _StoryPageState();
 }
 
